@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1 onclick="console.log('h1 is clicked')">Event  with botton Click</h1>
+
+    <button onclick="document.body.style.backgroundColor = 'yellow'">Click me</button>
+
+    <button onclick="makeRed()">Click me :Red</button>
+
+    <button id="make-blue-button">Click me Blue</button>
+
+    <button id="make-green-button">Cllick me green</button> 
+
+    <button id="male-golde-rod">Clicked me :Golden rod</button>
+
+    <button id="light-blue">clicked me light blue</button>
+
+    <button id="make-hotpink">Cllick me pink</button>
+
+    <script src="js/events.js"></script>
+
+    <script>
+       document.getElementById("light-blue").addEventListener('click',function(){
+           document.body.style.backgroundColor = ' lightblue'
+       })
+    </script>
+</body>
+</html>

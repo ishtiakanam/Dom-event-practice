@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Bubble</title>
+</head>
+<body>
+    <h1>Event bubble vai</h1>
+    <section id="section-container">
+        <h4>Bubble vai list</h4>
+        <ul id="list-container">
+            <li class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore quisquam laboriosam! Facere accusamus nisi eligendi quis. Praesentium quod aspernatur ipsum quia iure, molestias voluptatibus magnam cupiditate eveniet laboriosam necessitatibus.</li>
+
+            <li id="second-item" class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore quisquam laboriosam! Facere accusamus nisi eligendi quis. Praesentium quod aspernatur ipsum quia iure, molestias voluptatibus magnam cupiditate eveniet laboriosam necessitatibus.</li>
+
+            <li class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore quisquam laboriosam! Facere accusamus nisi eligendi quis. Praesentium quod aspernatur ipsum quia iure, molestias voluptatibus magnam cupiditate eveniet laboriosam necessitatibus.</li>
+
+            <li class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore quisquam laboriosam! Facere accusamus nisi eligendi quis. Praesentium quod aspernatur ipsum quia iure, molestias voluptatibus magnam cupiditate eveniet laboriosam necessitatibus.</li>
+
+            <li class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore quisquam laboriosam! Facere accusamus nisi eligendi quis. Praesentium quod aspernatur ipsum quia iure, molestias voluptatibus magnam cupiditate eveniet laboriosam necessitatibus.</li>
+
+            <li class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore quisquam laboriosam! Facere accusamus nisi eligendi quis. Praesentium quod aspernatur ipsum quia iure, molestias voluptatibus magnam cupiditate eveniet laboriosam necessitatibus.</li>
+        </ul>
+    </section>
+    <script>
+         document.getElementById("second-item").addEventListener('click',function(event){
+             console.log('second li clicked');
+             event.stopPropagation();
+         })
+         //ul
+         document.getElementById("list-container").addEventListener('click',function(){
+             console.log('ul clicked')
+         })
+         //
+         document.getElementById("section-container").addEventListener('click',function(){
+             console.log('section clicked')
+         })
+    </script>
+</body>
+</html>
